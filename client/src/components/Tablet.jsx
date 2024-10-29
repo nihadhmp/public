@@ -1,7 +1,6 @@
 import cloud from "../assets/cloud.png";
 import humidity from "../assets/humidity.png";
 import wind from "../assets/wind.png";
-import { FaSearch } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { useState, useEffect } from "react";
 
@@ -66,12 +65,12 @@ const Tablet = () => {
   };
 
   return (
-    <section className="flex justify-center  w-2/6 h-5/5 bg-slate-300 bg-opacity-50 rounded-lg font-orbitron">
+    <section className="w-full flex justify-center  lg:w-2/6 lg:h-5/5 bg-slate-300 bg-opacity-50 rounded-lg font-orbitron">
       <div className="flex flex-col items-center w-full">
         <div className="mt-5 flex items-center justify-center ">
           <FaLocationDot className="bg-white rounded-l-lg h-full size-8 pl-3 text-slate-600" />
           <input
-            className="px-12 py-3 text-lg text-slate-600 "
+            className="px-12 py-3 text-lg text-slate-600 rounded-r-lg"
             value={city}
             onChange={(e) => setCity(e.target.value)}
             onKeyPress={(e) => e.key === "Enter" && handleSearch()}

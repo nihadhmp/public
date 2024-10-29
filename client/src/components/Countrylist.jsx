@@ -7,7 +7,7 @@ function Countrylist() {
 
   return (
     <>
-      <select className="w-40 py-2 rounded-lg border border-teal-400">
+      <select className="w-40 py-2 rounded-lg ">
         <option>Select a Country</option>
         {countries.map((country) => (
           <>

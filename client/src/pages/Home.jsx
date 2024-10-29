@@ -12,7 +12,7 @@ function Home() {
         }}
       >
         <Navbar />
-        <div className="w-full h-screen flex justify-center items-center">
+        <div className="w-full h-screen flex lg:justify-center lg:items-center">
           <Tablet />
         </div>
       </div>
