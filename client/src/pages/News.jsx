@@ -24,7 +24,7 @@ const News = () => {
 
   useEffect(() => {
     getData();
-  }, [search]);
+  }, [search, getData]);
 
   return (
     <>
