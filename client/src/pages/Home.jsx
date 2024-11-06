@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Background from "../assets/bg.jpg";
 import Tablet from "../components/Tablet";
+import Footer from "../components/footer";
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
         <div className="w-full h-screen flex lg:justify-center lg:items-center">
           <Tablet />
         </div>
+        <Footer />
       </div>
     </>
   );

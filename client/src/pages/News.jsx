@@ -1,21 +1,22 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Card from "../components/Card";
 import Navbar from "../components/Navbar";
 import { FaSearch } from "react-icons/fa";
+import Footer from "../components/footer";
 
 const News = () => {
-  const [search, setSearch] = useState("india");
+  const [search, setSearch] = useState("kerala");
   const API_KEY = "08d50e67d5e34db482169e37e7844e86";
   const [newsData, setNewsData] = useState([]);
 
-  const getData = async () => {
+  const getData = useCallback(async () => {
     const response = await fetch(
       `https://newsapi.org/v2/everything?q=${search}&apiKey=${API_KEY}`
     );
     const jsonData = await response.json();
     console.log(jsonData.articles);
     setNewsData(jsonData.articles);
-  };
+  }, [search]);
 
   const handleinput = async (e) => {
     console.log(e.target.value);
@@ -74,6 +75,7 @@ const News = () => {
           </div>
         </section>
       </div>
+      <Footer />
     </>
   );
 };
