@@ -28,6 +28,8 @@ const News = () => {
     getData();
   }, [search, getData]);
 
+  if (!newsData) return <p>Loading</p>;
+
   return (
     <>
       <div className=" justify-center items-center bg-slate-200">
