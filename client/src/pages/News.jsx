@@ -8,6 +8,7 @@ const News = () => {
   const API_KEY = "08d50e67d5e34db482169e37e7844e86";
   const [newsData, setNewsData] = useState([]);
 
+  // caching the getData function
   const getData = useCallback(async () => {
     const response = await fetch(
       `https://newsapi.org/v2/everything?q=${search}&apiKey=${API_KEY}`
