@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import Card from "../components/Card";
 import Navbar from "../components/Navbar";
 import { FaSearch } from "react-icons/fa";
+import Footer from "../components/footer";
 
 const News = () => {
   const [search, setSearch] = useState("india");
@@ -74,6 +75,7 @@ const News = () => {
             <Card data={newsData} />
           </div>
         </section>
+        <Footer />
       </div>
     </>
   );
