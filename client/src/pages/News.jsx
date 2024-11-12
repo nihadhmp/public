@@ -3,6 +3,7 @@ import Card from "../components/Card";
 import Navbar from "../components/Navbar";
 import { FaSearch } from "react-icons/fa";
 import Footer from "../components/footer";
+import Loading from "../assets/Loading.gif";
 
 const News = () => {
   const [search, setSearch] = useState("india");
@@ -28,7 +29,7 @@ const News = () => {
     getData();
   }, [search, getData]);
 
-  if (!newsData) return <p>Loading</p>;
+  if (!newsData) return <img src={Loading} />;
 
   return (
     <>
