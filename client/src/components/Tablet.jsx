@@ -41,6 +41,7 @@ const Tablet = () => {
       const response = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?${query}&units=metric&appid=${API_KEY}`
       );
+
       if (!response.ok) {
         throw new Error("City not found");
       }

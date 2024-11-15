@@ -38,14 +38,14 @@ const News = () => {
         <section className="flex flex-col justify-center items-center">
           <div className="flex justify-center items-center mb-5">
             <input
-              className="py-2 px-20 mt-2 rounded-l-lg bg-white"
+              className="p-2 w-60 mt-7 rounded-l-lg bg-white"
               placeholder="Search News"
               onChange={handleinput}
               onKeyPress={(e) => e.key === "Enter" && handleinput()}
             ></input>
-            <butoon className="py-2 px-2 rounded-r-lg bg-white font-bold text-slate-600 mt-2">
+            <button className="py-2 px-2 rounded-r-lg bg-white font-bold text-slate-600 mt-7">
               <FaSearch onClick={getData} className="size-6 " />
-            </butoon>
+            </button>
           </div>
 
           <div className="hidden lg:flex w-1/2 justify-around items-center">

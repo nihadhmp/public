@@ -5,7 +5,7 @@ import WideView from "../assets/WideView.png";
 function Footer() {
   return (
     <>
-      <footer className="w-screen px-20 lg:max-h-96 bg-teal-950 flex flex-col lg:flex-row justify-between items-center">
+      <footer className="max-w-screen px-20 lg:max-h-96 bg-teal-950 flex flex-col lg:flex-row justify-between items-center">
         <section className="w-full lg:w-3/5 flex flex-col lg:flex-row text-xl justify-around text-slate-400">
           <div>
             <ul className="space-y-7 my-7 lg:m-0">
