@@ -4,8 +4,6 @@ import wind from "../assets/wind.png";
 import { FaLocationDot } from "react-icons/fa6";
 import { useState, useEffect } from "react";
 
-const API_KEY = "8fef9523b1af10072dfb639e15bf8b39";
-
 const Tablet = () => {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState(null);
@@ -39,7 +37,7 @@ const Tablet = () => {
   const fetchWeatherData = async (query) => {
     try {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?${query}&units=metric&appid=${API_KEY}`
+        `https://api.openweathermap.org/data/2.5/weather?${query}&units=metric&appid=${process.env.WEATHER_API_KEY}`
       );
 
       if (!response.ok) {

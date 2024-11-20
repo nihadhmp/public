@@ -13,7 +13,7 @@ const News = () => {
   // caching the getData function
   const getData = useCallback(async () => {
     const response = await fetch(
-      `https://newsapi.org/v2/everything?q=${search}&apiKey=${API_KEY}`
+      `https://eventregistry.org/api/v1/article/getArticles?resultType=articles&keyword=${search}&apiKey=${API_KEY}`
     );
     const jsonData = await response.json();
     console.log(jsonData.articles);
