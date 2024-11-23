@@ -7,15 +7,15 @@ const Card = (props) => {
       {props.data.map((curItem) => {
         return (
           <>
-            <div className="flex flex-col rounded-lg w-auto h-auto justify-center items-center py-3 px-3 border border-slate-700 m-4">
+            <div className="flex flex-col rounded-lg w-auto h-96 justify-center items-center p-3 border border-slate-700 m-4">
               <img
-                className="overflow-hidden"
+                className="overflow-hidden max-w-80 h-60"
                 src={curItem.urlToImage}
-                alt=""
+                alt="thumbnile"
               />
               <div className="">
                 <a className="font-bold text-sm ">{curItem.title}</a>
-                <p>{curItem.description}</p>
+                <p className="line-clamp-2">{curItem.description}</p>
                 <a
                   href={curItem.url}
                   className="text-slate-500 hover:underline"

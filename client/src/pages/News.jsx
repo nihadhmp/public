@@ -7,13 +7,13 @@ import Loading from "../assets/Loading.gif";
 
 const News = () => {
   const [search, setSearch] = useState("india");
-  const API_KEY = "08d50e67d5e34db482169e37e7844e86";
+  const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
   const [newsData, setNewsData] = useState([]);
 
   // caching the getData function
   const getData = useCallback(async () => {
     const response = await fetch(
-      `https://eventregistry.org/api/v1/article/getArticles?resultType=articles&keyword=${search}&apiKey=${API_KEY}`
+      `https://newsapi.org/v2/everything?q=${search}&apiKey=${API_KEY}`
     );
     const jsonData = await response.json();
     console.log(jsonData.articles);
@@ -33,7 +33,7 @@ const News = () => {
 
   return (
     <>
-      <div className=" justify-center items-center bg-slate-200">
+      <div className=" justify-center items-center bg-slate-200 ">
         <Navbar />
         <section className="flex flex-col justify-center items-center">
           <div className="flex justify-center items-center mb-5">
@@ -74,7 +74,7 @@ const News = () => {
               Health
             </button>
           </div>
-          <div className="">
+          <div className="px-5">
             <Card data={newsData} />
           </div>
         </section>

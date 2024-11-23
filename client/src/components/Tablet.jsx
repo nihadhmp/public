@@ -8,6 +8,8 @@ const Tablet = () => {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState("");
+  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
+  console.log("api key: ", API_KEY);
 
   useEffect(() => {
     getCurrentLocationWeather();
@@ -37,7 +39,7 @@ const Tablet = () => {
   const fetchWeatherData = async (query) => {
     try {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?${query}&units=metric&appid=${process.env.WEATHER_API_KEY}`
+        `https://api.openweathermap.org/data/2.5/weather?${query}&units=metric&appid=${API_KEY}`
       );
 
       if (!response.ok) {
