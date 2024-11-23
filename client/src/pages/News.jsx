@@ -74,7 +74,7 @@ const News = () => {
               Health
             </button>
           </div>
-          <div className="px-5">
+          <div className="px-5gi">
             <Card data={newsData} />
           </div>
         </section>
