@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import { FaSearch } from "react-icons/fa";
 import Footer from "../components/footer";
 import Loading from "../assets/Loading.gif";
+import SkeltonCard from "../components/SkeltonCard";
 
 const News = () => {
   const [search, setSearch] = useState("india");
@@ -74,7 +75,8 @@ const News = () => {
               Health
             </button>
           </div>
-          <div className="px-5gi">
+          <div className="px-5">
+            <SkeltonCard />
             <Card data={newsData} />
           </div>
         </section>
